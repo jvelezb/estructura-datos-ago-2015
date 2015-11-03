@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package semana4;
 
 
@@ -52,7 +48,7 @@ public class Bag<Item> implements Iterable<Item> {
         return new ListIterator<Item>(first);  
     }
 
-    // an iterator, doesn't implement remove() since it's optional
+   
     private class ListIterator<Item> implements Iterator<Item> {
         private Node<Item> current;
 
@@ -74,16 +70,24 @@ public class Bag<Item> implements Iterable<Item> {
     /**
      * Unit tests the <tt>Bag</tt> data type.
      */
+    
+    
     public static void main(String[] args) {
-        Bag<String> bag = new Bag<String>();
-        bag.add("Hola");
-        bag.add("str1");
-        bag.add("str2");
-        bag.add("str3");
+        Bag<Cuentas> bag = new Bag<Cuentas>();
+        Cuentas cuenta1 = new Cuentas();
+        cuenta1.numero = "Cuenta1";
+        bag.add(cuenta1);
+        Cuentas cuenta2 = new Cuentas();
+        cuenta2.numero = "Cuenta2";
+        bag.add(cuenta2);
+        Cuentas cuenta3 = new Cuentas();
+        cuenta3.numero = "Cuenta3";
+        bag.add(cuenta3);
+        
 
-        System.out.println("size of bag = " + bag.size());
-        for (String s : bag) {
-            System.out.println(s);
+        System.out.println("numero de cuenta del dia = " + bag.size());
+        for (Cuentas s : bag) {
+            System.out.println(s.numero);
         }
     }
 

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package semana4;
 
 /**
@@ -67,11 +63,7 @@ package semana4;
             back = -1;
         }
 
-        /**
-         * Get the least recently inserted item in the queue.
-         * Does not alter the queue.
-         * @return the least recently inserted item in the queue, or null, if empty.
-         */
+        
         public Object getFront( )
         {
             if( isEmpty( ) )
@@ -79,10 +71,7 @@ package semana4;
             return this.theArray[ front ];
         }
 
-        /**
-         * Return and remove the least recently inserted item from the queue.
-         * @return the least recently inserted item in the queue, or null, if empty.
-         */
+        
         public Object dequeue( )
         {
             if( isEmpty( ) )
@@ -95,11 +84,7 @@ package semana4;
             return frontItem;
         }
 
-        /**
-         * Insert a new item into the queue.
-         * @param x the item to insert.
-         * @exception Overflow if queue is full.
-         */
+      
         public void enqueue( Object x ) throws Exception
         {
             if( isFull( ) )
@@ -109,11 +94,7 @@ package semana4;
             currentSize++;
         }
 
-        /**
-         * Internal method to increment with wraparound.
-         * @param x any index in theArray's range.
-         * @return x+1, or 0, if x is at the end of theArray.
-         */
+        
         private int increment( int x )
         {
             if( ++x == theArray.length )
